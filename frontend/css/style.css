@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.searchSection {
+  background-color: #de273e;
+  padding: 10px 0;
+}
+
+.title {
+  margin: 0;
+  color: white;
+}
+
+.searchBtn {
+  background-color: #1ab64f;
+  color: white;
+  border: 0;
+}
+
+.searchBox {
+  margin-top: 20px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
