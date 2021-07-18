@@ -13,7 +13,7 @@ const displayTab = function (hovertab) {
 
 list.addEventListener("mouseover", function (e) {
   const hovertab = e.target;
-  console.log(hovertab.classList);
+  // console.log(hovertab.classList);
   if (hovertab.classList.contains("home")) {
     displayTab(hovertab);
   }
