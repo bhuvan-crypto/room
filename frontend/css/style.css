@@ -2,6 +2,50 @@ body {
   margin: 0;
 }
 
+/* tabs section */
+
+.tabs {
+  background-color: #f3f5f7;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.listitem a {
+  text-decoration: none;
+  margin: 0 5px;
+  color: black;
+}
+
+.home {
+  position: relative;
+}
+
+.tabValue {
+  position: absolute;
+  background-color: white;
+  color: #de273e;
+  z-index: 1;
+  list-style: none;
+  padding-left: 15px;
+  padding-right: 10px;
+  border: 1px;
+  border-color: black;
+}
+
+.itemContainer {
+  opacity: 0;
+}
+
+/* search section */
+
 .center {
   text-align: center;
 }
