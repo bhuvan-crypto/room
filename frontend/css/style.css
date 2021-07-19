@@ -5,6 +5,52 @@ body {
   height: 100vh;
 }
 
+/* blur Background */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  background-color: black;
+}
+
+.blurBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.loginBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  height: 40%;
+  width: 40%;
+  background-color: white;
+  z-index: 2;
+  box-shadow: 0 10px 10px 1rem rgb(75 63 63 / 50%);
+  transition: all 0.5s;
+}
+.loginForm {
+  width: 60%;
+  margin: 0 0.5rem;
+}
+
+#exampleInputEmail1 {
+  margin: 1.5rem 0;
+}
+
+#exampleInputPassword1 {
+  margin: 1.5rem 0;
+}
+/* tobar  */
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -24,7 +70,6 @@ h5 {
 .login {
   text-decoration: none;
   color: black;
-  border-left: black;
   border-left: 1px solid black;
 }
 
@@ -54,7 +99,7 @@ h5 {
   margin-bottom: 0;
 }
 
-.listitem a {
+.list li a {
   text-decoration: none;
   margin: 0 5px;
   color: black;
@@ -72,12 +117,15 @@ h5 {
   list-style: none;
   padding-left: 15px;
   padding-right: 10px;
-  border: 1px;
-  border-color: black;
+  border: 1px solid black;
 }
 
 .itemContainer {
   opacity: 0;
+}
+
+.showitemContainer {
+  opacity: 1;
 }
 
 /* search section */
@@ -109,11 +157,9 @@ h5 {
   margin-right: auto;
 }
 
-
 /* footer */
 
-.footer{
+.footer {
   background-color: #6d787d;
   height: 20vh;
-  
 }
