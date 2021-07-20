@@ -4,27 +4,35 @@ const dotenv = require("dotenv");
 const path = require("path");
 const hbs = require("hbs");
 
-const home = require("./routes/home");
-
+const route = require("./routes/route");
 
 // secrets
-dotenv.config({path:"config.env"});
-const PORT = process.env.PORT ||5000;
+dotenv.config({ path: "config.env" });
+const PORT = process.env.PORT || 8000;
 
-// views, view engine, partial 
-app.set("view engine" , "hbs");
+// database
+
+require("./database/connection");
+
+// views, view engine, partial
+app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "./templates/views"));
-hbs.registerPartials(path.join(__dirname, "/templates/views/partials"));
+hbs.registerPartials(path.join(__dirname, "./templates/partials"));
 
 // static assets
 app.use(express.static(path.join(__dirname, "/public")));
 
 
+
+// parsing req body
+
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+ 
 // routing
-app.get("/",home);
+app.use("/", route);
 
 
-
-app.listen(PORT , ()=>{
-    console.log(`server is runnig on ${PORT}`);
-})
+app.listen(PORT, () => {
+  console.log(`server is runnig on ${PORT}`);
+});

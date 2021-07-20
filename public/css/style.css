@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(4rem);
+}
+
+/* blur Background */
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  background-color: black;
+}
+
+.blurBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.loginBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  height: 40%;
+  width: 40%;
+  background-color: white;
+  z-index: 2;
+  box-shadow: 0 10px 10px 1rem rgb(75 63 63 / 50%);
+  transition: all 0.5s;
+}
+.loginForm {
+  width: 60%;
+  margin: 0 0.5rem;
+}
+
+#exampleInputEmail1 {
+  margin: 1.5rem 0;
+}
+
+#exampleInputPassword1 {
+  margin: 1.5rem 0;
+}
+/* topbar  */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.sticky {
+  position: fixed;
+  background-color: #de273e;
+  color: #fff;
+  top: 0;
+  margin: 0;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.logo {
+  margin-bottom: 0;
+  color: black;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+.login {
+  text-decoration: none;
+  color: black;
+  border-left: 1px solid black;
+}
+
+.login h5 {
+  display: inline;
+  margin-left: 10px;
+}
+
+.userIcon {
+  color: #000 !important;
+  margin-right: 10px;
+ 
+}
+
+.userIcon:hover{
+  transform: scale(1.5, 1.5);
+  transition: transform 0.15s ease-in;
+}
+
+
+
+/* tabs section */
+
+.tabs {
+  background-color: #f3f5f7;
+  font-size: 1.2rem;
+  padding: 0 1.5rem 0 1.6rem;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.list li a {
+  text-decoration: none;
+  margin: 0 5px;
+  color: black;
+}
+
+.home {
+  position: relative;
+}
+
+.tabValue {
+  position: absolute;
+  background-color: white;
+  color: #de273e;
+  z-index: 1;
+  list-style: none;
+  padding-left: 15px;
+  padding-right: 10px;
+  border: 1px solid black;
+}
+
+.itemContainer {
+  opacity: 0;
+}
+
+.showitemContainer {
+  opacity: 1;
+}
+
+/* search section */
+
+.center {
+  text-align: center;
+}
+
+.searchSection {
+  background-color: #de273e;
+  padding: 10px 0;
+}
+
+.title {
+  margin: 0;
+  color: white;
+}
+
+.searchBtn {
+  background-color: #1ab64f;
+  color: white;
+  border: 0;
+}
+
+.searchBox {
+  margin-top: 20px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* feature Section */
+
+.featureColoumn {
+  padding: 10px;
+}
+
+/* footer */
+
+.footer {
+  background-color: #6d787d;
+  height: 20vh;
+  padding-bottom: 30%;
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* results */
+
+.results {
+  padding-bottom: 15%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.resultshead {
+  padding: 9% 0%;
+}
+
+/* review section */
+
+.testimonial-img {
+  width: 10%;
+  border-radius: 5rem;
+  margin: 0 2%;
+}
+
+#testimonials {
+  text-align: center;
+  background-color: #ef8172;
+  padding: 15% 13%;
+}
+
+.testimonailsh2 {
+  padding: 10% 0%;
+}
+
+/* features */
+
+#features {
+  padding: 18% 0%;
+  text-align: center;
+}
+
+.fp1 {
+  margin: 2rem 0px;
+}
+
+.fp2 {
+  margin: 2rem 0px;
+}
+
+.fp3 {
+  margin: 2rem 0px;
+}
+
+.fp1 p {
+  width: 60%;
+  margin: 1rem auto;
+  color: #8f8f8f;
+}
+
+.fp2 p {
+  width: 60%;
+  margin: 1rem auto;
+  color: #8f8f8f;
+}
+
+.fp3 p {
+  width: 60%;
+  margin: 1rem auto;
+  color: #8f8f8f;
+}
+
+.fas {
+  color: #ef8172;
+}
+
+.fas:hover {
+  color: #ff4c68;
+}
