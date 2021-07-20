@@ -5,15 +5,18 @@ const queryClassFunc = function (className) {
 const home = document.querySelector(".home");
 const list = document.querySelector(".list");
 const listItem = document.querySelector(".listitem");
-const tabValue = document.querySelector(".tabValue");
+let tabValue = document.querySelector(".tabValue");
 const loginBtn = queryClassFunc("login");
 const loginBox = queryClassFunc("loginBox");
 const blurBackground = queryClassFunc("blurBackground");
+const topbar = queryClassFunc("topbar");
+const searchSection = queryClassFunc("searchSection");
 
 // hiding tab
 
 const removeTab = function (hovertab, itemContainer) {
-  hovertab.addEventListener("mouseout", function (e) {
+  hovertabParent = hovertab.parentElement;
+  hovertabParent.addEventListener("mouseleave", function (e) {
     itemContainer.classList.remove("showitemContainer");
   });
 };
@@ -59,4 +62,39 @@ document.addEventListener("keydown", function (e) {
     blurBackground.classList.add("hidden");
     loginBox.classList.add("hidden");
   }
+});
+
+// sticky navigation
+
+const stickytopbar = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) topbar.classList.add("sticky");
+  else topbar.classList.remove("sticky");
+};
+
+const topbarObserver = new IntersectionObserver(stickytopbar, {
+  root: null,
+  threshold: 0,
+});
+
+topbarObserver.observe(searchSection);
+
+// section feature
+
+const displaySection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(displaySection, {
+  root: null,
+  threshold: 0,
+});
+
+const allSections = document.querySelectorAll(".section");
+allSections.forEach((section) => {
+  section.classList.add("section-hidden");
+  sectionObserver.observe(section);
 });
