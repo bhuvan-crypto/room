@@ -77,6 +77,7 @@ body {
   margin: 0;
   z-index: 1;
   opacity: 0.9;
+  transition: background-color 1s;
 }
 
 .logo {
@@ -93,23 +94,28 @@ h5 {
   border-left: 1px solid black;
 }
 
+.sticky .part2 .userIcon {
+  color: white;
+}
+
+.sticky .part2 .login {
+  color: white;
+}
+
 .login h5 {
   display: inline;
   margin-left: 10px;
 }
 
 .userIcon {
-  color: #000 !important;
+  color: #000;
   margin-right: 10px;
- 
 }
 
-.userIcon:hover{
+.userIcon:hover {
   transform: scale(1.5, 1.5);
   transition: transform 0.15s ease-in;
 }
-
-
 
 /* tabs section */
 
