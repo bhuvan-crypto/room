@@ -11,6 +11,7 @@ body {
 .section-hidden {
   opacity: 0;
   transform: translateY(4rem);
+  text-align: center;
 }
 
 /* blur Background */
